@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada&family=Montserrat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Girassol&display=swap');
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+/*
+
+body{
+	font-family: 'Montserrat Subrayada', sans-serif;
+	font-family: 'Montserrat', sans-serif;
+}
+*/
+
+
+
+.logo{
+	font-family: girassol;
+}
+
+header{
+	background: #f4f4f4;
+	width: 100%;
+	height: 100px;
+	display: flex;
+}
+
+.logo-and-bar{
+	display: flex;
+	width: 100%;
+}
+
+
+.hamburger{
+	padding-left: 20px;
+}
+
+.logo{
+	flex: 1;
+	height: 100px;
+	text-align: center;
+}
+
+.logo , .hamburger{
+	font-size: 30px;
+	line-height: 100px;
+}
+
+
+ul{
+	position: fixed;
+	background: #2c3e50;
+	width: 100%;
+	height: 100vh;
+	top: 100px;
+	left: -100%;
+	transition:all .5s ease-in;
+	text-align: center;
+}
+
+ul li{
+	list-style: none;
+	margin: 50px 0;
+	line-height: 30px;
+}
+
+
+ul li a{
+	color: white;
+	display: block;
+	text-decoration: none;
+	font-size: 20px;
+	text-transform: uppercase;
+	font-family: 'Montserrat', sans-serif;
+}
+#check{
+	display: none;
+}
+.logo-and-bar #check:checked ~ ul{
+	left: 0;
+}
+
+
+main{
+	margin: 10px;
+}
+
+main h2{
+	font-weight: 500;
+	font-size: 25px;
+	width: 100%;
+	height: auto;
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+
+main .p1{
+	padding: 5px;
+	color: #696969;
+	font-size: 14px;
+	line-height: 1.5;
+	background: #f6f6f6;
+}
+
+main .p2{
+	font-size: 20px;
+	line-height: 1.5;
+}
+
+
+/* grid part */
+
+.grid{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	margin: 10px;
+	padding-top:10px ;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	row-gap: 13px;
+	grid-template-areas: 
+	"name name"
+	"image image"
+	"h0 p0"
+	"h1 p1"
+	"h2 p2"
+	"h3 p3"
+	"h4 p4"
+	"h5 p5";
+
+
+	height:100%;
+	width:calc(100% - 20px);
+	background: #f4f4f4;
+	overflow: hidden;
+	border:  .5px solid #d4d4d4; 
+}
+
+.grid > h3{
+	grid-area: name;
+	text-align: center;
+	border-bottom: .5px solid #d4d4d4;
+}
+.grid > img{
+	margin-left: 20vw;
+	grid-area: image;
+}
+
+.h0 {
+	grid-area: h0;
+}
+.p0{
+	grid-area: p0;
+}
+
+.h1 {
+	grid-area: h1;
+}
+.p1{
+	grid-area: p1;
+}
+.h2 {
+	grid-area: h2;
+}
+.p2{
+	grid-area: p2;
+}
+
+.h3 {
+	grid-area: h3;
+}
+.p3{
+	grid-area: p3;
+}
+
+.h4 {
+	grid-area: h4;
+}
+.p4{
+	grid-area: p4;
+}
+
+.h5 {
+	grid-area: h5;
+}
+.p5{
+	grid-area: p5;
+}
+
+
+/*  Border to every element*/
+.s{
+	padding: 10px;
+	line-height: 1.5;
+	border-top:  .5px solid #d4d4d4;
+}
+
+/* another section */
+.last-section{
+	margin: 10px;
+}
+
+.last-section p{
+	line-height: 1.5;
+	margin: 20px 0;
+}
+
+footer{
+	width: 100%;
+	height: 60px;
+	background: black;
+	color: white;
+}
+footer h4{
+	display: block;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 25px;
+	line-height: 60px;
+}
+
+
+/* Desktop version */
+
+@media (min-width:900px)
+{
+	.grid img{
+		margin-left: 40vw;
+
+	}
+}
